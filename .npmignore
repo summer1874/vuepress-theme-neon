@@ -1,0 +1,11 @@
+.circleci/
+.temp/
+.vscode/
+docs/
+docs-dist/
+.editorconfig
+.eslint*
+.git*
+yarn.lock
+package-lock.json
+*.log
