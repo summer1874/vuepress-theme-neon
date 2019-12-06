@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-neon",
-  "version": "1.0.0-alpha.36",
+  "version": "1.0.1",
   "description": "Vuepress theme - neon",
   "author": "summer1874 <summer19941126@gmail.com>",
   "license": "MIT",
@@ -34,35 +34,44 @@
       "git add"
     ]
   },
-  "peerDependencies": {
-    "vuepress": "1.0.0-alpha.48"
-  },
   "dependencies": {
-    "@vssue/vuepress-plugin-vssue": "^0.8.1",
-    "@vue/babel-preset-jsx": "^1.0.0-beta.2",
-    "@vuepress/plugin-back-to-top": "1.0.0-alpha.44",
-    "@vuepress/plugin-google-analytics": "1.0.0-alpha.44",
+    "@vssue/api-github-v3": "^1.0.0",
+    "@vssue/vuepress-plugin-vssue": "^1.0.0",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.0.0",
+    "@vuepress/plugin-back-to-top": "^1.0.0",
+    "@vuepress/plugin-google-analytics": "^1.0.0",
+    "@vuepress/shared-utils": "^1.0.0",
     "date-fns": "^1.30.1",
     "geopattern": "^1.2.3",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "markdown-it-center-text": "^1.0.4",
     "vuepress-plugin-container": "^1.1.1",
     "vuepress-plugin-nprogress": "^1.1.0",
+    "vuepress-plugin-redirect": "^1.1.2",
+    "vuepress-plugin-serve": "^1.1.0",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
-    "vuepress-plugin-table-of-contents": "^1.0.0",
-    "vuepress-plugin-zooming": "^1.0.0"
+    "vuepress-plugin-table-of-contents": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.2"
   },
   "devDependencies": {
-    "conventional-changelog-cli": "^2.0.12",
-    "eslint": "^5.10.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "husky": "^1.3.0",
-    "lint-staged": "^8.1.0",
-    "vuepress": "1.0.0-alpha.48"
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "conventional-changelog-cli": "^2.0.21",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "sort-package-json": "^1.22.1",
+    "vuepress": "^1.2.0"
+  },
+  "peerDependencies": {
+    "vuepress": "^1.2.0"
   }
 }

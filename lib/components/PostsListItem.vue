@@ -65,15 +65,17 @@
       </span>
     </p>
 
+    <!-- eslint-disable vue/no-v-html -->
     <p
       class="post-excerpt content"
       v-html="post.excerpt || post.frontmatter.description || ''"
     />
+    <!-- eslint-enable vue/no-v-html -->
   </div>
 </template>
 
 <script>
-import IconInfo from './IconInfo.vue'
+import IconInfo from '@theme/components/IconInfo.vue'
 
 export default {
   name: 'PostsListItem',

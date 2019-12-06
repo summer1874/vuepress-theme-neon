@@ -1,4 +1,4 @@
-@require 'variables'
+@require '~@theme/styles/variables'
 
 .content
   width 100%
@@ -52,13 +52,7 @@
   h4, h5, h6
     font-size 1rem
   code, kbd
-    font-family fira code, Consolas, Monaco, Andale Mono, Ubuntu Mono, source-code-pro, Menlo, Consolas, "Courier New", monospace
-    // background rgba(0,255,255,0)
-    // text-shadow 0px 0px 20px
-    background-color: #fff5f5;
-    color: #ff502c;
-    font-size: .87em;
-    padding: .065em .4em;
+    font-family Sarasa Term SC Medium, fira code, Poppins, Lato, Calibri, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Heiti SC, Hiragino Sans GB, Microsoft YaHei, Dengxian, Simsun, sans-serif
   blockquote
     padding 0 1em
     color #6a737d
@@ -81,8 +75,11 @@
   th, td
     border 1px solid #dfe2e5
     padding .6em 1em
-
+  code
+    background-color: #fff5f5;
+    color: #ff502c;
   pre[class*="language-"] 
+    background: #151718 !important;
     padding: 4em 1.5em 1.5em
     code:before 
       position: absolute;
@@ -94,9 +91,23 @@
       border-radius: 50%;
       background-color: #ff5f56;
       box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f
-      
-.post-nav-card 
-  overflow-y auto
-  max-height 80vh
-  a
-    font-size 14px
+    code
+      font-size: 16px 
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
+      text-shadow: 0px 0px 40px;
+  .post-nav-card 
+    overflow-y auto
+    max-height 80vh
+    a
+      font-size 14px
+  pre.language-js
+    code
+      color: #e06c75;
+    .token.boolean, .token.number, .token.function 
+      color: #61afef;
+    .token.string, .token.char, .token.attr-value, .token.regex, .token.variable 
+      color: #98c379;
+    .token.operator
+      color #56b6c2

@@ -1,15 +1,15 @@
 <template>
   <div class="tags-select">
     <label
-      v-for="tag in Object.keys($tags.map)"
+      v-for="tag in tags"
       :key="tag"
       class="tag-checkbox"
     >
       <input
         v-show="false"
+        v-model="selectedTags"
         type="checkbox"
         :value="tag"
-        v-model="selectedTags"
       >
 
       <IconTag
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import IconTag from './IconTag.vue'
+import IconTag from '@theme/components/IconTag.vue'
 
 export default {
   name: 'PostsFilterTags',
@@ -36,6 +36,17 @@ export default {
     }
   },
 
+  computed: {
+    tags () {
+      return Object.keys(this.$tags.map)
+        .filter(
+          key => !this.$tags.map[key].posts.every(
+            item => item.frontmatter.draft === true
+          )
+        )
+    },
+  },
+
   watch: {
     selectedTags (val) {
       this.$emit('input', val)
@@ -43,13 +54,3 @@ export default {
   },
 }
 </script>
-
-<style lang="stylus" scoped>
-@require '~@theme/styles/variables'
-
-.tag-checkbox
-  input[type="checkbox"]:checked + .post-tag
-    color $accentColor
-    .icon
-      fill $accentColor
-</style>

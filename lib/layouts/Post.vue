@@ -5,7 +5,7 @@
     <article class="main-div">
       <Content
         :key="$page.path"
-        class="post-content"
+        class="post-content content"
       />
     </article>
 
@@ -19,14 +19,13 @@
       <Vssue
         :title="vssueTitle"
         :issue-id="vssueId"
-        :options="vssueOptions"
       />
     </div>
   </div>
 </template>
 
 <script>
-import PostMeta from '../components/PostMeta.vue'
+import PostMeta from '@theme/components/PostMeta.vue'
 
 export default {
   name: 'Post',
@@ -37,32 +36,19 @@ export default {
 
   computed: {
     meta () {
-      return this.$frontmatter['meta'] !== false
+      return this.$frontmatter.meta !== false
     },
 
     vssue () {
-      return this.$themeConfig.comments !== false && this.$frontmatter['vssue'] !== false && (this.vssueTitle || this.vssueId)
+      return this.$themeConfig.comments !== false && this.$frontmatter.vssue !== false && (this.vssueTitle || this.vssueId)
     },
 
     vssueTitle () {
-      return this.$frontmatter['vssue-title'] || this.$frontmatter['title'] || undefined
+      return this.$frontmatter['vssue-title'] || this.$frontmatter.title || undefined
     },
 
     vssueId () {
       return this.$frontmatter['vssue-id'] || undefined
-    },
-
-    vssueOptions () {
-      if (this.$themeConfig.comments && (
-        typeof this.$themeConfig.comments.platform === 'undefined' ||
-        this.$themeConfig.comments.platform === 'github'
-      )) {
-        const labels = (this.$themeConfig.comments && this.$themeConfig.comments.labels) || ['Vssue']
-        return {
-          labels: labels.concat(this.vssueTitle.replace(/,/g, '')),
-        }
-      }
-      return {}
     },
   },
 }

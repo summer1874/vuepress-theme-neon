@@ -1,15 +1,15 @@
 @require '~prismjs/themes/prism-tomorrow.css'
-@require 'variables'
+@require '~@theme/styles/variables'
 @require '~@vuepress/theme-default/styles/code'
-@require 'custom-blocks'
-@require 'normalize'
-@require 'content'
-@require 'classes'
-
+@require '~@theme/styles/_content'
+@require '~@theme/styles/_custom-blocks'
+@require '~@theme/styles/_layouts'
+@require '~@theme/styles/_normalize'
+@require '~@theme/styles/_tags'
 /*定义滚动条高宽及背景
  高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
-  width:4px;
+  width: 6px;
   height:8px;
   background-color:#F5F5F5;
 /*定义滚动条轨道
