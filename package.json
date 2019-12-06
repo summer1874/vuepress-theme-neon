@@ -23,11 +23,6 @@
     "lint": "eslint --fix --ext .js,.vue .",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,vue}": [
       "eslint --fix",

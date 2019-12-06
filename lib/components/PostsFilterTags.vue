@@ -41,8 +41,8 @@ export default {
       return Object.keys(this.$tags.map)
         .filter(
           key => !this.$tags.map[key].posts.every(
-            item => item.frontmatter.draft === true
-          )
+            item => item.frontmatter.draft === true,
+          ),
         )
     },
   },

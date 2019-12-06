@@ -2,4 +2,4 @@
 .temp
 docs-dist
 node_modules
-docs
+docs/*
