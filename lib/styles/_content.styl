@@ -79,7 +79,8 @@
     background-color: #fff5f5;
     color: #ff502c;
   pre[class*="language-"] 
-    background: #151718 !important;
+    background-color: rgb(43, 33, 58) !important;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 6px 9px;
     padding: 4em 1.5em 1.5em
     code:before 
       position: absolute;
@@ -96,18 +97,47 @@
       padding: 0;
       background-color: transparent;
       border-radius: 0;
-      text-shadow: 0px 0px 40px;
+      // text-shadow: 0px 0px 40px;
   .post-nav-card 
     overflow-y auto
     max-height 80vh
     a
       font-size 14px
-  pre.language-js
+  pre[class*="language-"]
     code
-      color: #e06c75;
-    .token.boolean, .token.number, .token.function 
-      color: #61afef;
-    .token.string, .token.char, .token.attr-value, .token.regex, .token.variable 
-      color: #98c379;
+      color: #fdfdfd;
+      text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975, 0 0 8px #03edf975;
+    .token.function 
+      color: rgb(174, 255, 177);
+      text-shadow: 0 0 2px #100c0f, 0 0 5px rgba(174, 255, 177,0.2), 0 0 10px rgba(255,255,255,0.2);
+    .token.keyword
+      color: #f4eee4;
+      font-style: italic;
+      text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+    .token.punctuation
+      font-weight: initial;
+      font-style: initial;
+      text-decoration: initial;
+      text-shadow: none;
+    .token.comment
+      color: #b5b5b5;
+      font-style: italic;
+      text-shadow: none;
     .token.operator
-      color #56b6c2
+      color: #f4eee4;
+      text-shadow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+    .token.string
+      color: rgb(255, 139, 57) !important;
+      text-shadow: none;
+    .token.builtin
+      color: rgb(255, 163, 221);
+      text-shadow: 0 0 2px #100c0f, 0 0 5px rgba(255, 163, 221, 0.2), 0 0 10px rgba(255,255,255,0.2);
+    .token.number    
+      color: #00BCD4;
+      text-shadow: none;
+    .token.class-name
+      color: #FFEB3B;
+      text-shadow: 0 0 2px #100c0f, 0 0 5px rgba(255, 235, 59,0.2), 0 0 10px rgba(255,255,255,0.2);
+    .token.boolean
+      color: rgb(244, 67, 54);
+      text-shadow: 0 0 2px #100c0f, 0 0 5px rgba(244, 67, 54,0.2), 0 0 10px rgba(255,255,255,0.2);

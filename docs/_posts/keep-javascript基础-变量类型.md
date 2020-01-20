@@ -90,7 +90,7 @@ var name2 = name.substring(2);
 - 引用类型转换为`String`类型，先调用`toString`，再调用`valueOf`
 
 若`valueOf`和`toString`都不存在，或者没有返回基本类型，则抛出`TypeError`异常。
-```js
+```ts
 const obj = {
   valueOf: () => { console.log('valueOf'); return 123 },
   toString: () => { console.log('toString'); return 'ConardLi' }
@@ -117,6 +117,21 @@ console.log(obj3 - 1)
 除了程序中的自动拆箱和自动装箱，我们还可以手动进行拆箱和装箱操作。我们可以直接调用包装类型的valueOf或toString，实现拆箱操作：
 ```js
 const num =new Number('123')
+const num =new Number('123')
+try {
+
+} catch(error) {
+
+}
+const a = 1
+const a = '2'
+const a = true
+const a = undefined
+const a = null
+const a = {}
+const a = []
+const a = function(){}
+const a = Symbol(42);
 console.log( typeof num.valueOf() ) // number
 console.log( typeof num.toString() ) // string
 ```
